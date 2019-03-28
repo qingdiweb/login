@@ -6,7 +6,7 @@ import { Link, hashHistory } from 'react-router'
 import { login , thirdPartyLogin ,weixinLogin} from '../../fetch/login/login'
 //import loginimg from 'src/img/collect-sel.png'
 
-import * as userInfoActionsFromOtherFile from '../../actions/userinfo' 
+import * as userInfoActionsFromOtherFile from '../../actions/userinfo'
 import './style.less'
 
 import { Form, Icon, Input, Button, Checkbox , Tabs , Row, Col,message} from 'antd';
@@ -84,9 +84,9 @@ class Login extends React.Component {
        })
    /*   var obj = new WxLogin({
             self_redirect:true,
-            id:"codeBox", 
-            appid: "wx41ddc056b87016ba", 
-            scope: "snsapi_login", 
+            id:"codeBox",
+            appid: "wx41ddc056b87016ba",
+            scope: "snsapi_login",
             redirect_uri: "https://www.huazilive.com/zuoye",
             state: new Date().getTime(),
             style: "",
@@ -121,7 +121,7 @@ class Login extends React.Component {
                                localStorage.setItem("loginToken",data.data.loginToken);
                                if(data.data.loginToken&&localStorage.getItem("loginToken")){
                                  window.location.href='home.html';
-                                 
+
                                }
                             }else{
                               message.warning(data.error)
@@ -134,15 +134,15 @@ class Login extends React.Component {
                         })
               }
           })
-        
+
     }
     callback(key) {
     /*  if(key==2){
         var obj = new WxLogin({
             self_redirect:true,
-            id:"codeBox", 
-            appid: "wx41ddc056b87016ba", 
-            scope: "snsapi_login", 
+            id:"codeBox",
+            appid: "wx41ddc056b87016ba",
+            scope: "snsapi_login",
             redirect_uri: "https://www.huazilive.com/zuoye",
             state: new Date().getTime(),
             style: "",
@@ -186,9 +186,9 @@ class Login extends React.Component {
     weixinLogin(){
          /*var obj = new WxLogin({
             self_redirect:true,
-            id:"codeBox", 
-            appid: "wx41ddc056b87016ba", 
-            scope: "snsapi_login", 
+            id:"codeBox",
+            appid: "wx41ddc056b87016ba",
+            scope: "snsapi_login",
             redirect_uri: "https://www.huazilive.com/zuoye",
             state: new Date().getTime(),
             style: "",
@@ -203,7 +203,7 @@ class Login extends React.Component {
           console.log(["当前登录用户的", "openId为："+openId, "accessToken为："+accessToken].join("\n"));
           let appId='1106266783',
               appKey='2421951481',
-              accountType='common', 
+              accountType='common',
               oauthId=openId,
               oauthType='qq',
               oauthToken=accessToken;
@@ -278,18 +278,18 @@ class Login extends React.Component {
             </TabPane>
           {/*  <TabPane tab="扫码登录" key="2">
               <div id="codeBox" className='weixincode-box'>
-                
+
               </div>
             </TabPane>*/}
           </Tabs>
-          
-          <div className="third-party-login">
-              <p>第三方登录</p>
-              <a href="javascript:;" id="weixinLoginBtn"className="weixin-login" onClick={this.weixinLogin.bind(this)}><img src={weixinimg} alt=""/></a>
-              <a href="javascript:;" id="qqLoginBtn" className="qq-login" onClick={this.qqLogin.bind(this)}>
-                 {/* <img src={qqimg} alt=''/>*/}
-              </a>
-          </div>
+
+          {/*<div className="third-party-login">*/}
+              {/*<p>第三方登录</p>*/}
+              {/*<a href="javascript:;" id="weixinLoginBtn"className="weixin-login" onClick={this.weixinLogin.bind(this)}><img src={weixinimg} alt=""/></a>*/}
+              {/*<a href="javascript:;" id="qqLoginBtn" className="qq-login" onClick={this.qqLogin.bind(this)}>*/}
+                 {/*/!* <img src={qqimg} alt=''/>*!/*/}
+              {/*</a>*/}
+          {/*</div>*/}
           </div>
     );
   }
