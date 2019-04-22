@@ -18,8 +18,8 @@ function obj2params(obj) {
 
 // 发送 post 请求
 export function post(url, paramsObj) {
-    var host='https://test.huazilive.com/api/service';//测试地址
-    //var host='https://api.huazilive.com/api/service';//正式地址
+    // var host='https://test.huazilive.com/api/service';//测试地址
+    var host='https://api.huazilive.com/api/service';//正式地址
     var result = fetch(host+url, {
         method: 'POST',
         credentials: 'include',

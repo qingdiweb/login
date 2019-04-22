@@ -42,10 +42,10 @@ class Login extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     componentWillMount(){
-      console.log('code',this.GetQueryString.bind(this,'code')())
+      console.log('=====  code',this.GetQueryString.bind(this,'code')())
       let code=this.GetQueryString.bind(this,'code')(),
-          appId='1106266783',
-          appKey='2421951481',
+          appId='20111104',
+          appKey='7cf0536ee029c2d30ab730a067eb5703',
           accountType='common';
         if(code!=null){
           const resultLogin=weixinLogin(appId,appKey,accountType,code);
@@ -201,8 +201,8 @@ class Login extends React.Component {
       QC.Login.getMe((openId, accessToken)=>{
           //alert(["当前登录用户的", "openId为："+openId, "accessToken为："+accessToken].join("\n"));
           console.log(["当前登录用户的", "openId为："+openId, "accessToken为："+accessToken].join("\n"));
-          let appId='1106266783',
-              appKey='2421951481',
+          let appId='20111104',
+              appKey='7cf0536ee029c2d30ab730a067eb5703',
               accountType='common',
               oauthId=openId,
               oauthType='qq',
@@ -284,11 +284,11 @@ class Login extends React.Component {
           </Tabs>
 
           <div className="third-party-login">
-              {/*<p>第三方登录</p>*/}
-              {/*<a href="javascript:;" id="weixinLoginBtn"className="weixin-login" onClick={this.weixinLogin.bind(this)}><img src={weixinimg} alt=""/></a>*/}
-              {/*<a href="javascript:;" id="qqLoginBtn" className="qq-login" onClick={this.qqLogin.bind(this)}>*/}
-                 {/*/!* <img src={qqimg} alt=''/>*!/*/}
-              {/*</a>*/}
+              <p>第三方登录</p>
+              <a href="javascript:;" id="weixinLoginBtn"className="weixin-login" onClick={this.weixinLogin.bind(this)}><img src={weixinimg} alt=""/></a>
+              <a href="javascript:;" id="qqLoginBtn" className="qq-login" onClick={this.qqLogin.bind(this)}>
+                 {/* <img src={qqimg} alt=''/>*/}
+              </a>
           </div>
           </div>
     );
