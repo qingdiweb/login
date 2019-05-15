@@ -44,8 +44,8 @@ class Login extends React.Component {
     componentWillMount(){
       console.log('code',this.GetQueryString.bind(this,'code')())
       let code=this.GetQueryString.bind(this,'code')(),
-          appId='1106266783',
-          appKey='2421951481',
+          appId='20111104',
+          appKey='7cf0536ee029c2d30ab730a067eb5703',
           accountType='common';
         if(code!=null){
           const resultLogin=weixinLogin(appId,appKey,accountType,code);
