@@ -10,6 +10,7 @@ import * as userInfoActionsFromOtherFile from '../../actions/userinfo'
 import './style.less'
 
 import { Form, Icon, Input, Button, Checkbox , Tabs , Row, Col,message} from 'antd';
+import {accountType,appId,appKey} from "../../constants/store";
 const weixinimg = require("../../static/img/weixin.png");
 const qqimg = require("../../static/img/qq.png");
 const FormItem = Form.Item;
@@ -43,10 +44,7 @@ class Login extends React.Component {
     }
     componentWillMount(){
       console.log('code',this.GetQueryString.bind(this,'code')())
-      let code=this.GetQueryString.bind(this,'code')(),
-          appId='20111104',
-          appKey='7cf0536ee029c2d30ab730a067eb5703',
-          accountType='common';
+      let code=this.GetQueryString.bind(this,'code')();
         if(code!=null){
           const resultLogin=weixinLogin(appId,appKey,accountType,code);
                 resultLogin.then(res=>{
@@ -272,7 +270,7 @@ class Login extends React.Component {
                     })(
                       <Checkbox>记住密码</Checkbox>
                     )}
-                    <a href="javascript:;" className="login-form-register" onClick={this.registerHand.bind(this)}>注册</a><span className="login-form-divider">|</span><a className="login-form-forgot" href="javascript:;"  onClick={this.forgotHand.bind(this)}>忘记密码</a>
+                    {/*<a href="javascript:;" className="login-form-register" onClick={this.registerHand.bind(this)}>注册</a><span className="login-form-divider">|</span><a className="login-form-forgot" href="javascript:;"  onClick={this.forgotHand.bind(this)}>忘记密码</a>*/}
                   </FormItem>
                 </Form>
             </TabPane>
