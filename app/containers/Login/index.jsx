@@ -6,7 +6,7 @@ import { hashHistory } from 'react-router'
 import Login from '../../components/Login'
 import Register from '../../components/Register'
 
-import * as userInfoActionsFromOtherFile from '../../actions/userinfo' 
+import * as userInfoActionsFromOtherFile from '../../actions/userinfo'
 import './style.less'
 
 import { Form, Icon, Input, Button, Checkbox , Tabs , Row, Col,} from 'antd';
@@ -60,7 +60,7 @@ class HuaziLogin extends React.Component {
               <div>
                <div className='huaziHeader clear-fix'>
                     <span className='huaziHeader-logo'></span>
-                    <span className='huaziHeader-text'></span>
+                    <span className='huaziHeader-text2'>汇课通</span>
                 </div>
                 <div  className="login-bg" style={{height:'572px'}}>
                   <span className="huazi-logo"></span>
